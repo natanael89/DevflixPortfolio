@@ -33,7 +33,7 @@ yarn-error.log*
 .env*
 
 # context
-/context
+./context
 
 # vercel
 .vercel
