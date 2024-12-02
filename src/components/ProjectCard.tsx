@@ -42,33 +42,8 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
                     <p className="text-gray-300 text-sm md:text-base mb-4 line-clamp-2">
                         {project.description}
                     </p>
-                    <div className="flex gap-4">
-                        {project.github && (
-                            <Link
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <FaGithub size={24} />
-                            </Link>
-                        )}
-                        {project.demo && (
-                            <Link
-                                href={project.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <FaExternalLinkAlt size={24} />
-                            </Link>
-                        )}
-                    </div>
                 </div>
             </div>
         </Link>
     )
 }
-

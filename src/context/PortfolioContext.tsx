@@ -3,8 +3,6 @@
 import React, { createContext } from "react"
 
 export interface Project {
-    github: React.JSX.Element
-    demo: React.JSX.Element
     id: number
     title: string
     image: string
