@@ -47,8 +47,8 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
                     </p>
                     <div className="flex gap-4">
                         {project.github && (
-                            <a
-                                href={project.github}
+                            <Link
+                                href={String(project.github)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-red-500 transition-colors"
@@ -59,11 +59,11 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
                                 }}
                             >
                                 <FaGithub size={24} />
-                            </a>
+                            </Link>
                         )}
                         {project.demo && (
-                            <a
-                                href={project.demo}
+                            <Link
+                                href={String(project.demo)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-red-500 transition-colors"
@@ -74,7 +74,7 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
                                 }}
                             >
                                 <FaExternalLinkAlt size={24} />
-                            </a>
+                            </Link>
                         )}
                     </div>
                 </div>
