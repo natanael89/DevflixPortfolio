@@ -3,14 +3,10 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { Project } from '../context/PortfolioContext'
 
 interface ProjectCardProps {
-    project: Project & {
-        github?: string
-        demo?: string
-    }
+    project: Project
     featured?: boolean
 }
 
@@ -19,7 +15,7 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
     
     return (
         <Link 
-            href={`/projetos/${project.id}`} 
+            href={`/project/${project.id}`} 
             className={`group relative w-full block overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 rounded-xl ${
                 featured ? 'h-[400px]' : 'h-[300px]'
             }`}
@@ -45,38 +41,6 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
                     <p className="text-gray-300 text-sm md:text-base mb-4 line-clamp-2">
                         {project.description}
                     </p>
-                    <div className="flex gap-4">
-                        {project.github && (
-                            <Link
-                                href={String(project.github)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors"
-                                onClick={(e) => {
-                                    e.preventDefault()
-                                    e.stopPropagation()
-                                    window.open(project.github, '_blank')
-                                }}
-                            >
-                                <FaGithub size={24} />
-                            </Link>
-                        )}
-                        {project.demo && (
-                            <Link
-                                href={String(project.demo)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors"
-                                onClick={(e) => {
-                                    e.preventDefault()
-                                    e.stopPropagation()
-                                    window.open(project.demo, '_blank')
-                                }}
-                            >
-                                <FaExternalLinkAlt size={24} />
-                            </Link>
-                        )}
-                    </div>
                 </div>
             </div>
         </Link>
