@@ -1,0 +1,10 @@
+{
+  "name": "DevFlix Portfolio",
+  "short_name": "DevFlix",
+  "description": "Portfolio pessoal desenvolvido com Next.js, React, TypeScript e TailwindCSS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "orientation": "portrait-primary"
+}
