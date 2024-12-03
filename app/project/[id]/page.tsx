@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import React from 'react'
-import { FaArrowLeft } from 'react-icons/fa6'
+
 
 interface PageProps {
     params: {
@@ -38,7 +38,7 @@ export default function ProjectPage({ params }: PageProps) {
                     href="/#projetos" 
                     className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors py-2  rounded-full "
                 >
-                    <FaArrowLeft className="mr-2" />
+                   
                     Voltar
                 </Link>
 

@@ -2,7 +2,7 @@
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import ProjectCard from '@/src/components/ProjectCard'
 import Link from 'next/link'
-import { FaArrowLeft } from 'react-icons/fa'
+
 
 export default function ProjetosPage() {
     const { projects } = usePortfolio()
@@ -23,7 +23,7 @@ export default function ProjetosPage() {
                     href="/" 
                     className="inline-flex items-center text-gray-400 hover:text-white mb-12 transition-colors"
                 >
-                    <FaArrowLeft className="mr-2" />
+                   
                     Voltar para Home
                 </Link>
 

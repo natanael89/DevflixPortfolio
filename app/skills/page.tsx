@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import { FaArrowLeft } from 'react-icons/fa'
 import SkillsSection from '@/src/components/SkillsSection'
 
 export default function SkillsPage() {
@@ -12,7 +11,7 @@ export default function SkillsPage() {
                     href="/" 
                     className="inline-flex items-center text-gray-400 hover:text-white mb-12 transition-colors"
                 >
-                    <FaArrowLeft className="mr-2" />
+                   
                     Voltar para Home
                 </Link>
 

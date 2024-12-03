@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import { useParams } from 'next/navigation'
-import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function ProjectDetailsPage() {
@@ -28,7 +27,6 @@ export default function ProjectDetailsPage() {
                     href="/projetos" 
                     className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors py-2  rounded-full "
                 >
-                    <FaArrowLeft className="mr-2" />
                     Voltar
                 </Link>
 

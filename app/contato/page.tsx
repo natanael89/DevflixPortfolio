@@ -11,7 +11,7 @@ export default function ContatoPage() {
                     href="/" 
                     className="inline-flex items-center text-gray-400 hover:text-white mb-12 transition-colors"
                 >
-                    <FaArrowLeft className="mr-2" />
+                  
                     Voltar para Home
                 </Link>
 

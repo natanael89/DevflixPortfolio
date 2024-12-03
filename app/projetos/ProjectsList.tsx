@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { FaArrowLeft } from 'react-icons/fa'
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import ProjectCard from '@/src/components/ProjectCard'
 
@@ -14,7 +13,7 @@ export default function ProjectsList() {
                 href="/" 
                 className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors"
             >
-                <FaArrowLeft className="mr-2" />
+                
                 Voltar para Home
             </Link>
 
