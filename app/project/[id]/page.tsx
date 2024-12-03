@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePortfolio } from '@/src/context/PortfolioContext'
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa'
 import React from 'react'
+import { FaArrowLeft } from 'react-icons/fa6'
 
 interface PageProps {
     params: {
@@ -52,59 +52,15 @@ export default function ProjectPage({ params }: PageProps) {
                             sizes="(max-width: 1200px) 100vw, 1200px"
                         />
                     </div>
-
                     <div className="p-6 md:p-8">
                         <div className="flex justify-between items-start mb-6">
                             <h1 className="text-3xl md:text-4xl font-bold">
                                 {project.title}
                             </h1>
-                            <div className="flex gap-4">
-                                {project.github && (
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-gray-400 hover:text-white transition-colors"
-                                        aria-label="Ver no GitHub"
-                                    >
-                                        <FaGithub className="w-6 h-6" />
-                                    </a>
-                                )}
-                                {project.demo && (
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-gray-400 hover:text-white transition-colors"
-                                        aria-label="Ver Demo"
-                                    >
-                                        <FaExternalLinkAlt className="w-6 h-6" />
-                                    </a>
-                                )}
-                            </div>
                         </div>
-
                         <p className="text-gray-300 mb-8">
                             {project.description}
-                        </p>
-
-                        {project.technologies && (
-                            <div>
-                                <h2 className="text-xl font-semibold mb-4">
-                                    Tecnologias Utilizadas
-                                </h2>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.technologies.map((tech: string, index: number) => (
-                                        <span
-                                            key={index}
-                                            className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        </p>               
                     </div>
                 </div>
             </div>
