@@ -1,5 +1,4 @@
 // Sobre mim
-"use client";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import type { Metadata } from 'next'
