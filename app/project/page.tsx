@@ -1,4 +1,4 @@
-'use client'
+
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import ProjectCard from '@/src/components/ProjectCard'
 import Link from 'next/link'

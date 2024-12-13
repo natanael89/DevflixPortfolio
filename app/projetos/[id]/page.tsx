@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
+import { FaArrowLeft } from 'react-icons/fa'
 
 export default function ProjectDetailsPage() {
     const { projects } = usePortfolio()
@@ -25,9 +26,10 @@ export default function ProjectDetailsPage() {
             <div className="container mx-auto max-w-4xl">
                 <Link 
                     href="/projetos" 
-                    className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors py-2  rounded-full "
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors"
                 >
-                    Voltar
+                    <FaArrowLeft size={20} />
+                    Voltar para Projetos
                 </Link>
 
                 <div className="bg-gray-800 rounded-lg overflow-hidden shadow-xl">

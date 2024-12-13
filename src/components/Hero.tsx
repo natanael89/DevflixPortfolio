@@ -4,15 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePortfolio } from '@/src/context/PortfolioContext'
 
-interface Project {
-    id: number
-    title: string
-    description: string
-    image: string
-    github?: string
-    demo?: string
-    technologies?: string[]
-}
+
 
 const Hero = () => {
     const { projects } = usePortfolio()
