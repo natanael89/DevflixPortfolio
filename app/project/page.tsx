@@ -1,8 +1,9 @@
+'use client'
 
 import { usePortfolio } from '@/src/context/PortfolioContext'
 import ProjectCard from '@/src/components/ProjectCard'
 import Link from 'next/link'
-
+import { FaArrowLeft } from 'react-icons/fa'
 
 export default function ProjetosPage() {
     const { projects } = usePortfolio()
@@ -21,9 +22,9 @@ export default function ProjetosPage() {
                 {/* Back button */}
                 <Link 
                     href="/" 
-                    className="inline-flex items-center text-gray-400 hover:text-white mb-12 transition-colors"
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors group"
                 >
-                   
+                    <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" />
                     Voltar para Home
                 </Link>
 
@@ -38,7 +39,7 @@ export default function ProjetosPage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.slice(0, 3).map((project) => (
-                            <ProjectCard key={project.id} project={project} />
+                            <ProjectCard key={project.id} project={project} featured />
                         ))}
                     </div>
                 </section>
@@ -49,7 +50,7 @@ export default function ProjetosPage() {
                         Todos os Projetos
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map((project) => (
+                        {projects.slice(3).map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}
                     </div>
