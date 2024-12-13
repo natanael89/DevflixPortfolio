@@ -54,7 +54,7 @@ export default function ProjectPage({ params }: PageProps) {
                     </div>
                     <div className="p-6 md:p-8">
                         <div className="flex justify-between items-start mb-6">
-                            <h1 className="text-3xl md:text-4xl font-bold">
+                            <h1 className="text-3xl text-red-500 md:text-4xl font-bold">
                                 {project.title}
                             </h1>
                         </div>
